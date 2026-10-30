@@ -41,4 +41,4 @@
 - [ ] **prompt.md 与 SKILL.md 均含「任务 vs 剧情」识别条款** — 认出操作指令/回填 JSON/外部信息查询/能力问句是任务不是剧情素材；只写原则不枚举工具名（ask_user_question 等变体也要兼容）；回归用 `character-rp-audit` 的 `rp_behavior_probe.py --probes P6,P7,P11`
 - [ ] **双语输出规则已配置** — 当角色源语言与用户语言不一致时，prompt.md 和 SKILL.md 的 RP 核心指令中包含此规则：主文本用户语言，仅外语 `> 角色源语言原文`
 - [ ] **技能目录不含特定角色文件** — `~/.hermes/skills/creative/character-roleplay-templating/` 中不应有任何角色的 prompt/SOUL/IDENTITY/SKILL 或命名模板。角色文件应存于工作区目录或独立的 `act-as-<角色名>` 技能；**所有角色扮演技能统一放在 `roleplay/` 分类目录下**（不要散在 `creative/` 等其他分类里）
-- [ ] **仓库与工作副本对应关系清楚** — 角色包一般以 `HarukiTakehata/act-as-<英文名>` 为远端，而**工作副本就是 `~/.hermes/skills/roleplay/act-as-<名>/` 本身（它自己就是 git 仓库）**，不是 `/workspace/<名>-rp/`（后者只承担 prompt.md/主模板/raw-data 等不入库产物）；`/workspace/kanami-rp` 是历史例外（仓库即工作区目录）。提交前先 `git -C <技能目录> status` 确认改在哪一侧，避免“改了不提交”或“提交了空 diff”
+- [ ] **仓库与工作副本对应关系清楚** — 角色包一般以 `HarukiTakehata/act-as-<英文名>` 为远端，而**工作副本就是 `~/.hermes/skills/roleplay/act-as-<名>/` 本身（它自己就是 git 仓库）**，不是 `/workspace/<名>-rp/`（后者只承担 prompt.md/主模板/raw-data 等不入库产物）；`/workspace/Archived/kanami-rp` 是历史例外（仓库即工作区目录，停用后的角色包统一移入 `/workspace/Archived/`）。提交前先 `git -C <技能目录> status` 确认改在哪一侧，避免“改了不提交”或“提交了空 diff”
