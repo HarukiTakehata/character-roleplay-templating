@@ -1,7 +1,7 @@
 ---
 name: character-roleplay-templating
 description: "Use when the user wants to create a structured character roleplay (RP) package from public internet data. 6-step workflow: multi-source search, cross-validation, 4-file split, all safety/user-priority rules embedded in main SKILL.md, optional install."
-version: 2.1.0
+version: 2.2.0
 author: Hermes Agent
 license: MIT
 platforms: [linux, macos, windows]
@@ -70,7 +70,7 @@ metadata:
 
 产出 `角色名角色扮演模板.md`。规则如下：
 
-- **禁用 Emoji** — 标题、表格、正文中均不可出现
+- **禁用 Emoji** — 标题、表格、正文中均不可出现。**音乐记号（U+2669–U+266F 的 ♩♪♫♬♭♮♯）不算 Emoji**：角色语尾的「♪」来自官方语音台词，属说话风格的一部分，应保留在引号台词和风格说明里；用量由「表达节奏」节约束（每 3-4 句至多一处），不是一律删除。
 - **Token 敏感** — 表格 > 要点列表 > 段落
 - **保留来源章节** — "资料来源"表需包含 URL + 状态 + 覆盖范围
 - **交叉验证标记** — 每个数据类别标注来源数量；单源声明标记 `[单源]`
